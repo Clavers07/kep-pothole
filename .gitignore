@@ -23,6 +23,6 @@ Homestead.json
 Homestead.yaml
 Thumbs.db
 
-assets/*.jpg
-assets/*.png
-assets/*.jpeg
+/assets/*.jpg
+/assets/*.png
+/assets/*.jpeg
