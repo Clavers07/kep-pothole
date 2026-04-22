@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Label;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -29,6 +30,27 @@ class DatabaseSeeder extends Seeder
             'name' => 'user1',
             'email' => 'user1@example.com',
             'password' => 'pwuser123'
+        ]);
+
+        Label::create([
+            'name' => 'crack',
+            'desc' => ''
+        ]);
+        Label::create([
+            'name' => 'damaged',
+            'desc' => ''
+        ]);
+        Label::create([
+            'name' => 'pothole',
+            'desc' => ''
+        ]);
+        Label::create([
+            'name' => 'pothole water',
+            'desc' => ''
+        ]);
+        Label::create([
+            'name' => 'pothole water multi',
+            'desc' => ''
         ]);
     }
 }
