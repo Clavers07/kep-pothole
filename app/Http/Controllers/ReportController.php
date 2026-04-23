@@ -16,6 +16,15 @@ class ReportController extends Controller
         return response()->json(Report::all(), 200);
     }
 
+    public function show($id) {
+        $label = Report::find($id);
+        if (!$label) {
+            return response()->json(['message' => 'not found'], 404);
+        }
+
+        return response()->json(['data' => $label], 200);
+    }
+
     public function store(Request $request)
     {
         $validated = $request->validate([
@@ -41,7 +50,7 @@ class ReportController extends Controller
             'priority' => $request->priority,
             'status' => $request->status,
             'label_id' => $request->label_id,
-            'desc' => $request->desc,
+            'desc' => $request->desc?? '',
         ]);
         return response()->json(['message' => 'Berhasil!', 'data' => $report], 201);
     }

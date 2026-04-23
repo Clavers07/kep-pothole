@@ -24,7 +24,7 @@ return new class extends Migration
                 table: 'labels',
                 indexName: 'labeled_with'
             )->onUpdate('cascade')->onDelete('set null');
-            $table->string('desc');
+            $table->string('desc')->default('');
             $table->timestamps();
         });
     }
